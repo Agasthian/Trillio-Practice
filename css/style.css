@@ -9,7 +9,9 @@
   --grey-dark-1: #333;
   --grey-dark-2: #777;
   --grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --line: 1px solid var(--grey-light-2); }
 
 * {
   padding: 0;
@@ -162,7 +164,7 @@ body {
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--grey-light-2); }
+  border-bottom: var(--line); }
   .overview__heading {
     padding: 2rem 3rem;
     font-size: 2.25rem;
@@ -223,6 +225,48 @@ body {
     transform: scale(1);
     box-shadow: none; } }
 
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  list-style: none;
+  margin: 2rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  padding: 3rem 0;
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem; }
+  .list__item::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
+    background-color: var(--primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--grey-dark-2);
+  display: flex;
+  align-items: center; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-sizing: content-box; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -2rem; }
+
 .container {
   background-color: var(--grey-light-1);
   max-width: 120rem;
@@ -233,7 +277,7 @@ body {
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: 1px solid var(--grey-light-2);
+  border-bottom: var(--line);
   font-size: 1.4rem;
   display: flex;
   justify-content: space-between;
@@ -254,3 +298,21 @@ body {
   flex: 1;
   background-color: #fff;
   min-height: 80vh; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--grey-light-1); }
+
+.description {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  border-bottom: var(--line);
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  padding: 3rem;
+  font-size: 1.4rem; }
+
+.user-reviews {
+  background-color: yellowgreen;
+  flex: 1; }

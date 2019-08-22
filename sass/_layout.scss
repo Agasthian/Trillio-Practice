@@ -9,7 +9,7 @@
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: 1px solid var(--grey-light-2);
+  border-bottom: var(--line);
   font-size: 1.4rem;
 
   display: flex;
@@ -32,4 +32,24 @@
   background-color: #fff;
   //test
   min-height: 80vh;
+}
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--grey-light-1);
+}
+.description {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  border-bottom: var(--line);
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  padding: 3rem;
+  font-size: 1.4rem;
+}
+
+.user-reviews {
+  background-color: yellowgreen;
+  flex: 1;
 }
